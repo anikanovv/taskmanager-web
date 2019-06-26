@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+
+    <p:dataTable var="project" value="#{mainBean.getProjects()}">
+        <f:facet name="header">
+            List of Cars
+        </f:facet>
+        <p:column>
+            <f:facet name="id">
+                ID
+            </f:facet>
+            #{project.getId}
+            <f:facet name="footer">
+                8 digit code
+            </f:facet>
+        </p:column>
+        <p:column headerText="name" footerText="1960-2010">
+            #{project.getName}
+        </p:column>
+        //more columns
+        <f:facet name="footer">
+            In total there are cars.
+        </f:facet>
+    </p:dataTable>
+
+
+</h:body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <f:metadata>
+        <f:viewParam name="test" value="#{mainBean.test}"/>
+    </f:metadata>
+
+    <h:head>
+
+    </h:head>
+
+    <h:body>
+        <p:dataTable var="project" value="#{projects.getList()}">
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Id"/>
+                </f:facet>
+                <h:outputText value="#{project.id}"/>
+            </p:column>
+            <p:column>
+                <f:facet name="header">
+                    <h:outputText value="Id"/>
+                </f:facet>
+                <h:outputText value="#{project.id}"/>
+            </p:column>
+
+            <p:column headerText="Name">
+                <h:outputText value="#{project.name}"/>
+            </p:column>
+
+            <p:column headerText="Description">
+                <h:outputText value="#{project.description}"/>
+            </p:column>
+            <p:column headerText="UserId">
+                <h:outputText value="#{project.userId}"/>
+            </p:column>
+        </p:dataTable>
+    </h:body>
+
+</f:view>
+</html>
